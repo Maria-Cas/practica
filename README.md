@@ -96,3 +96,9 @@ como segundo
 
 Para general una nueva base de datos
 ![alt text](image.png)
+
+Para crear un controlador de un APi
+![alt text](image.png)
+
+Para crear el fichero api.php en routes (las rutas de api van a ir siempre con api.... y el nombre)
+![alt text](image-1.png)
