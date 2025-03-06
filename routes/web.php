@@ -15,7 +15,7 @@ Route::get('/alumnos', [AlumnoController::class, 'index'])->name('alumno.index')
 
 
 //Route::get('Alumnos', [\App\Http\Controllers\AlumnoController::class, 'index'])->name('alumnos');Route::resource('alumnos', AlumnoController::class);
-Route::resource('alumnos', \App\Http\Controllers\AlumnoController::class);
+Route::resource('alumnos', \App\Http\Controllers\AlumnoController::class)->middleware('auth');
 
 
 Route::get('/dashboard', function () {
