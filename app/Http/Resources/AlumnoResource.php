@@ -19,7 +19,7 @@ class AlumnoResource extends JsonResource
             'type' => 'alumno',
             'attributes' => [
                 'id' => $this->id,
-                'name' => $this->name,
+                'nombre' => $this->nombre,
                 'dni' => $this->dni,
                 'email' => $this->email
 

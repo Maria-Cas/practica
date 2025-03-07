@@ -11,10 +11,7 @@ class StoreAlumnoRequest extends FormRequest
      */
     public function authorize(): bool
     {
-
-        return true; /* autorizar la petición */
-
-
+        return true;
     }
 
     /**
@@ -25,16 +22,12 @@ class StoreAlumnoRequest extends FormRequest
     public function rules(): array
     {
         return [
-            "name"=> "required|string|max:255",
-            "dni"=>[
-                "required",
-                    "string",
-                "size:10",
-                "unique:alumnos,dni", 
-                "regex:/^[0-9]{8}\-[a-zA-Z]$/",
-        ],
-            "email" => "required|string|email|max:255|unique:alumnos,email",
-        ];
+            "data.attributes.nombre" => "required|string|max:20",
+            "data.attributes.dni" => "required|string|unique:alumnos,dni",
+            "data.attributes.email" => "required|email|unique:alumnos,email"
+            //
 
+
+        ];
     }
 }

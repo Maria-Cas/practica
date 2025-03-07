@@ -27,10 +27,10 @@ class AlumnoFactory extends Factory
      public function definition(): array
     {
         return [
-            'name' => $this->faker->firstName(),
+            'nombre' => $this->faker->name(),
             'dni'=> $this->dni(),
-            'email' => $this->faker->unique()->safeEmail(),
-            'password' => Hash::make('password123'),
+            'email' => fake()->unique()->safeEmail(),
+            
             
         ];
     }

@@ -1,3 +1,20 @@
+
+## Controladores
+> están en app/http/controllers
+> El código php que quiero que se ejecute ante una solicitud de una ruta
+
+## Rutas
+> La ruta es la url que quiero que mi app tenga
+> Las rutas se establecen en ./routes/web.php
+> Se especifican con Route::verbo("url",.....)
+> Para poner nombre o alias a la ruta  Route::verbo("url"..)->name("alumnos.index")
+> Para referenciar una ruta por su nombre uso la función route("nombre")
+> Las rutas pueden ser parametrizada (sobre todo haciendo un crud de un recurso).
+> Una ruta parametrizada es aquella que en la url hay un parámetro (valor que puede cambiar),
+http://alumnos/1 o https://alumnos/5, donde 1 y 5 son el parámetro
+> Cuando referencio una ruta por su nombre con la funcion route, para pasar el parámetro siempre lo haré
+como segundo
+
 ## Creo el proyecto
 
 ```bash
@@ -78,27 +95,29 @@ en caso de que hayas carpetas. Si quiero acceder o referenciar una carpeta
 > carpeta.nombre
 
 
-## Controladores
-> están en app/http/controllers
-> El código php que quiero que se ejecute ante una solicitud de una ruta
-
-## Rutas
-> La ruta es la url que quiero que mi app tenga
-> Las rutas se establecen en ./routes/web.php
-> Se especifican con Route::verbo("url",.....)
-> Para poner nombre o alias a la ruta  Route::verbo("url"..)->name("alumnos.index")
-> Para referenciar una ruta por su nombre uso la función route("nombre")
-> Las rutas pueden ser parametrizada (sobre todo haciendo un crud de un recurso).
-> Una ruta parametrizada es aquella que en la url hay un parámetro (valor que puede cambiar),
-http://alumnos/1 o https://alumnos/5, donde 1 y 5 son el parámetro
-> Cuando referencio una ruta por su nombre con la funcion route, para pasar el parámetro siempre lo haré
-como segundo
-
 Para general una nueva base de datos
 ![alt text](image.png)
+
+Para crear un API tengo que descargar npm install api y usar librerias 
+Instalamos con composerr darkonline
+![alt text](image.png)
+y la hacemos disponible para pode modificar los ficheros 
+![alt text](image-1.png)
 
 Para crear un controlador de un APi
 ![alt text](image.png)
 
 Para crear el fichero api.php en routes (las rutas de api van a ir siempre con api.... y el nombre)
 ![alt text](image-1.png)
+
+En app.php es donde se instancia la aplicacion
+
+En alumno request pondre las caracteristicas que tiene que cumplir los campos para poder acceder a nuestra API
+[alt text](image-1.png)
+
+En app.js es donde pondre las excepciones y asocio los middleware
+![alt text](image.png)
+
+Si la validacion no es correcta dare el error que se encuentar tambien en app.php
+![alt text](image-2.png)
+
