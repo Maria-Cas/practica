@@ -30,7 +30,7 @@
                         @foreach($alumnos as $alumno)
                             <tr class="hover:bg-gray-100">
                                
-                                <td class="text-center text-lg">{{$alumno->name}}</td>
+                                <td class="text-center text-lg">{{$alumno->nombre}}</td>
                                 
                                 <td class="text-center text-lg">{{$alumno->dni}}</td>
                                 

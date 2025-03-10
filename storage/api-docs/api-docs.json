@@ -4,7 +4,8 @@
         "title": "API para consultar alumnos de mi centro",
         "description": "Esta api permite interactuar con los alumnos de bd del instituto",
         "contact": {
-            "email": "Manuelromeromiguel@gmail.com"
+            "name": "Maria",
+            "email": "mariacasas@gmail.com"
         },
         "license": {
             "name": "MIT",
@@ -22,45 +23,9 @@
                 "operationId": "getAllStudents",
                 "responses": {
                     "200": {
-                        "description": "Éxito",
-                        "content": {
-                            "application/vnd.api+json": {
-                                "schema": {
-                                    "type": "array",
-                                    "items": {
-                                        "$ref": "#/components/schemas/Alumno"
-                                    }
-                                }
-                            }
-                        }
+                        "description": "Éxito"
                     }
                 }
-            }
-        }
-    },
-    "components": {
-        "schemas": {
-            "Alumno": {
-                "required": [
-                    "id",
-                    "name",
-                    "email"
-                ],
-                "properties": {
-                    "id": {
-                        "type": "integer",
-                        "example": 1
-                    },
-                    "name": {
-                        "type": "string",
-                        "example": "Juan Pérez"
-                    },
-                    "email": {
-                        "type": "string",
-                        "example": "juan@example.com"
-                    }
-                },
-                "type": "object"
             }
         }
     },

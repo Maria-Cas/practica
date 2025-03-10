@@ -10,30 +10,20 @@ use Illuminate\Http\Request;
 use function Pest\Laravel\json;
 
 /**
- * @OA\Info (
- *     title="API para consultar alumnos de mi centro",
+ * @OA\Info(
+ *      title="API para consultar alumnos de mi centro",
  *      version="2.0.0",
  *      description="Esta api permite interactuar con los alumnos de bd del instituto",
  *      @OA\Contact(
- *          email="Manuelromeromiguel@gmail.com",
+ *          name="Maria",
+ *          email="mariacasas@gmail.com",
  *      ),
  *      @OA\License(
  *          name="MIT",
  *          url="https://opensource.org/license/mit",
  *      )
  * )
- /**
-*     @OA\Schema(
- *         schema="Alumno",
- *         type="object",
- *         required={"id", "name", "email"},
- *         @OA\Property(property="id", type="integer", example=1),
- *         @OA\Property(property="name", type="string", example="Juan Pérez"),
- *         @OA\Property(property="email", type="string", example="juan@example.com")
-*     )
-
  */
-
 
 class AlumnoApiController extends Controller
 {
@@ -46,14 +36,6 @@ class AlumnoApiController extends Controller
      *      @OA\Response(
      *          response=200,
      *          description="Éxito",
-     *          @OA\MediaType(
-     *              mediaType="application/vnd.api+json",
-     *              @OA\Schema(
-     *                  type="array",
-     *                  @OA\Items(ref="#/components/schemas/Alumno")
-
-     *              )
-     *          )
      *      )
      * )
      */

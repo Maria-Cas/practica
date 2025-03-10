@@ -112,7 +112,7 @@ Para crear el fichero api.php en routes (las rutas de api van a ir siempre con a
 
 En app.php es donde se instancia la aplicacion
 
-En alumno request pondre las caracteristicas que tiene que cumplir los campos para poder acceder a nuestra API
+En alumno request pondré las caracteristicas que tiene que cumplir los campos para poder acceder a nuestra API
 [alt text](image-1.png)
 
 En app.js es donde pondre las excepciones y asocio los middleware
@@ -120,4 +120,19 @@ En app.js es donde pondre las excepciones y asocio los middleware
 
 Si la validacion no es correcta dare el error que se encuentar tambien en app.php
 ![alt text](image-2.png)
+
+El error esta descrito en ValidateHeaderMiddleware.php
+![alt text](image-1.png)
+
+Para confirmar que mi api funciona voy a postman y hago la peticion por get. me devolvera la lista de alumnos 
+![alt text](image.png)
+
+Con este comando instalamos una libreria para documentar la API
+![alt text](image-2.png)
+
+@OA\ es la forma de introducir mi aplicacion, tiene que ir comentado 
+![alt text](image-3.png)
+
+La informacion de la apli hay que ponerla siempre delante de la declaración
+
 
