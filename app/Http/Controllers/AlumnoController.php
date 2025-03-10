@@ -26,14 +26,16 @@ class AlumnoController extends Controller
     }
 
     // Método para almacenar un nuevo alumno en la base de datos
-    public function store(StoreAlumnoRequest $request) // Recibe los datos enviados desde el formulario
+    public function store(Request $request) // Recibe los datos enviados desde el formulario
     {
      
         $datos = $request->except("_token"); // Se obtiene toda la información del formulario, exceptuando el token de seguridad (_token)
         
         
+        
 
         $alumno = new Alumno($datos); // Creamos una nueva instancia del modelo Alumno con los datos recibidos
+        
         
 
         $alumno->save();  // Guardamos el alumno en la base de datos

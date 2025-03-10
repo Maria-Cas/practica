@@ -15,7 +15,7 @@
      <!--  validar  --><!-- Formulario -->
     <div>
         <label for="" class="flex flex-col justify-center items-center">Nombre</label>
-        <input name="name" type="text "  placeholder ="nombre"value= "{{old('name')}}"class="input input-bordered input-footer w-full max-w-xs text" />
+        <input name="nombre" type="text "  placeholder ="nombre" value= "{{old('nombre')}}"class="input input-bordered input-footer w-full max-w-xs text" />
         @error("name")
             <div class="text-red-600 text-sm">{{$message}}</div>
         @enderror
